@@ -20,7 +20,7 @@ int main() {
 
   printf("%d\n", Min<int>(114, 514));
   printf("%f\n", Min<float>(11.4f, 51.4f));
-  printf("%f\n", Min<double>(11.4333333, 51.4));
+  printf("%f\n", Min<double>(11.4, 51.4));
 
   return 0;
 }
