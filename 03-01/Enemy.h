@@ -3,7 +3,7 @@ class Enemy {
 public:
   enum class Phase {
     Approach, // 接近
-    Attack,   // 攻撃
+    Attack,   // 射撃
     Leave     // 離脱
   };
 

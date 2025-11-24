@@ -15,9 +15,9 @@ void Enemy::StateApproach() {
   printf(u8"接近中...\n");
   phase_ = Phase::Attack;
 }
-// 攻撃
+// 射撃
 void Enemy::StateAttack() {
-  printf(u8"攻撃中...\n");
+  printf(u8"射撃中...\n");
   phase_ = Phase::Leave;
 }
 // 離脱
