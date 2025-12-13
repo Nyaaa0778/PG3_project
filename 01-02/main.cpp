@@ -1,5 +1,4 @@
 #include <Windows.h>
-#include <algorithm>
 #include <iostream>
 #include <list>
 #include <string>

@@ -28,18 +28,18 @@ int main(void) {
 
   SetConsoleOutputCP(65001);
 
-  //乱数初期化
+  // 乱数初期化
   srand((unsigned)time(NULL));
 
-  //0で偶数、1で奇数
+  // 0で偶数、1で奇数
   int userGuess = 0;
   printf(u8"偶数なら0、奇数なら1を入力してください: ");
   scanf_s(u8"%d", &userGuess);
 
-  //サイコロを振る
+  // サイコロを振る
   int roll = rand() % 6 + 1;
 
-  //3秒待ってから結果表示
+  // 3秒待ってから結果表示
   DelayReveal(ShowResult, 3000, roll, userGuess);
 
   return 0;

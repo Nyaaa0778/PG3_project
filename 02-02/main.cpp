@@ -17,9 +17,9 @@ int main() {
 
   SetConsoleOutputCP(65001);
 
-  //一般的な賃金体系の給料
+  // 一般的な賃金体系の給料
   const int normalSalary = 1226;
-  //再帰的な賃金体系の給料
+  // 再帰的な賃金体系の給料
   const int startSalary = 100;
 
   for (int hour = 1; hour <= 10; ++hour) {

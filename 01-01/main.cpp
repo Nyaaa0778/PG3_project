@@ -2,7 +2,6 @@
 #include <cstring>
 #include <iostream>
 #include <list>
-#include <string>
 
 int main() {
 

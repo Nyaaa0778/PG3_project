@@ -1,7 +1,5 @@
 #include "Enemy.h"
 #include <Windows.h>
-#include <chrono>
-#include <stdio.h>
 #include <thread>
 
 int main(void) {
