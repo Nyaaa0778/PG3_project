@@ -1,6 +1,10 @@
 #include "CardPay.h"
 #include <stdio.h>
 
+CardPay::CardPay() {}
+
+CardPay::~CardPay() {}
+
 /// <summary>
 /// 支払い
 /// </summary>

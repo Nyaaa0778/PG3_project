@@ -1,6 +1,10 @@
 #include "CodePay.h"
 #include <stdio.h>
 
+CodePay::CodePay() {}
+
+CodePay::~CodePay() {}
+
 /// <summary>
 /// 支払い
 /// </summary>
