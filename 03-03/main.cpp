@@ -1,5 +1,4 @@
 #include <Windows.h>
-#include <stdio.h>
 
 #include "CardPay.h"
 #include "CashPay.h"
