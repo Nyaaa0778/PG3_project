@@ -1,14 +1,15 @@
 #include <Windows.h>
 #include <iostream>
-#include <list>
+#include <vector>
 #include <string>
+#include <algorithm>
 
 int main() {
 
   SetConsoleOutputCP(65001);
 
   // 学籍番号
-  std::list<std::string> studentID{
+  std::vector<std::string> studentID{
       "k024g1017@g.neec.ac.jp", "k024g0033@g.neec.ac.jp",
       "k024g0057@g.neec.ac.jp", "k024g0020@g.neec.ac.jp",
       "k024g0109@g.neec.ac.jp", "k024g1031@g.neec.ac.jp",
@@ -35,9 +36,9 @@ int main() {
       "k024g0064@g.neec.ac.jp", "k024g0051@g.neec.ac.jp",
       "k024g0093@g.neec.ac.jp", "k024g0024@g.neec.ac.jp"};
 
-  studentID.sort();
+  std::sort(studentID.begin(), studentID.end());
 
-  for (std::list<std::string>::iterator itr = studentID.begin();
+  for (std::vector<std::string>::iterator itr = studentID.begin();
        itr != studentID.end(); ++itr) {
     std::cout << *itr << ",\n";
   }
