@@ -1,14 +1,25 @@
 #include <Windows.h>
 #include <stdio.h>
 
-#include "Comparator.h"
+template <typename Type1, typename Type2>
+
+class Comparator {
+private:
+  Type1 a_;
+  Type2 b_;
+
+public:
+  Comparator(Type1 a, Type2 b) : a_(a), b_(b) {}
+
+  auto Min() { return (a_ < b_) ? a_ : b_; }
+};
 
 int main(void) {
 
   SetConsoleOutputCP(65001);
 
   Comparator<int, int> intAndInt(10, 30);
-  Comparator<int, float> intAndFloat(15, 7.0f);
+  Comparator<int, float> intAndFloat(1, 7.0f);
   Comparator<int, double> intAndDouble(100, 32.0);
   Comparator<float, float> floatAndFloat(64.0f, 16.0f);
   Comparator<float, double> floatAndDouble(128.0f, 256.0);

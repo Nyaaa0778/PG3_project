@@ -129,16 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CardPay.cpp" />
-    <ClCompile Include="CashPay.cpp" />
-    <ClCompile Include="CodePay.cpp" />
     <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CardPay.h" />
-    <ClInclude Include="CashPay.h" />
-    <ClInclude Include="CodePay.h" />
-    <ClInclude Include="Pay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

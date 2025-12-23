@@ -1,9 +1,44 @@
 #include <Windows.h>
+#include <stdio.h>
 
-#include "CardPay.h"
-#include "CashPay.h"
-#include "CodePay.h"
-#include "Pay.h"
+//====================================
+// 支払い基底クラス
+//====================================
+class Pay {
+public:
+  virtual ~Pay() {} // 仮想デストラクタ
+  virtual void Update(int money) = 0;
+};
+
+//====================================
+// 現金払い
+//====================================
+class CashPay : public Pay {
+public:
+  void Update(int money) override {
+    printf(u8"現金で %d 円支払いました\n", money);
+  }
+};
+
+//====================================
+// カード払い
+//====================================
+class CardPay : public Pay {
+public:
+  void Update(int money) override {
+    printf(u8"カードで %d 円支払いました\n", money);
+  }
+};
+
+//====================================
+// コード決済
+//====================================
+class CodePay : public Pay {
+public:
+  void Update(int money) override {
+    printf(u8"コード決済で %d 円支払いました\n", money);
+  }
+};
 
 int main(void) {
 
