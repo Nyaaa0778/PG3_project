@@ -38,9 +38,8 @@ int main() {
 
   std::sort(studentID.begin(), studentID.end());
 
-  for (std::vector<std::string>::iterator itr = studentID.begin();
-       itr != studentID.end(); ++itr) {
-    std::cout << *itr << ",\n";
+  for (const auto &id : studentID) {
+    std::cout << id << ",\n";
   }
 
   return 0;
