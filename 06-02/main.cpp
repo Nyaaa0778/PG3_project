@@ -56,10 +56,25 @@ int main() {
 
   std::thread t(LoadCsv, "map.csv");
 
-  { // 読み込み完了待ち
-    std::unique_lock<std::mutex> lock(mtx);
-    cv.wait(lock, [] { return loaded; });
+  std::unique_lock<std::mutex> lock(mtx);
+
+  // loaded が true になるまでループし続ける
+  while (!loaded) {
+    // ほんの少しだけ待つ
+    if (cv.wait_for(lock, std::chrono::milliseconds(16)) ==
+        std::cv_status::no_timeout) {
+      if (loaded) {
+        break; // 通知が来て読み込み完了していればループを抜ける
+      }
+    }
+
+    printf(u8"Now Loading...\r");
+    fflush(stdout);
   }
+  // ----------------
+
+  printf(u8"Done\r");
+  fflush(stdout);
 
   // マップ表示
   for (auto &row : mapData) {
